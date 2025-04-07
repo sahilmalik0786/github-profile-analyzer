@@ -32,10 +32,10 @@ export default function LanguageChart({ data }: LanguageChartProps) {
                 label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
               >
                 {/* we are maaping on chartData for only getting the indexes for cell keys to filling the color */}
-                
-                {chartData.map((entry, index) => (
-                    
-                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                let ele=[]
+                {chartData.map((_, index) => (
+                       <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                       
                  
                 ))}
               </Pie>
