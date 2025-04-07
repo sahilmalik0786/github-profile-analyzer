@@ -110,7 +110,7 @@ function Home() {
         <div className="space-y-6">
           <GithubCard user={user} />
 
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-2 w-96 md:w-full mx-auto">
             <LanguageChart data={languageData} />
             <ActivityCalender username={username} />
           </div>

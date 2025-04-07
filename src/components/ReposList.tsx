@@ -13,7 +13,7 @@ export default function RepoList({ repos }:RepoListProps) {
   const sortedRepos = [...repos].sort((a, b) => b.stargazers_count - a.stargazers_count)
 
   return (
-    <Card>
+    <Card  className=' md:w-full w-96  flex mx-auto'>
       <CardHeader>
         <CardTitle>Top Repositories</CardTitle>
       </CardHeader>

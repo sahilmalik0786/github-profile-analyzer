@@ -12,14 +12,14 @@ export default function GitHubStatsCard({ user }:GitHubStatsCardProps) {
   const yearsActive = new Date().getFullYear() - new Date(user.created_at).getFullYear()
   console.log(user)
   return (
-    <Card>
-      <CardHeader className="flex flex-row items-center gap-4">
+    <Card className=' md:w-full w-96  flex mx-auto'>
+      <CardHeader className="flex flex-row items-center gap-3 px-20 ">
         <Avatar className="h-16 w-16">
           <AvatarImage src={user.avatar_url} />
           <AvatarFallback>{user.login.charAt(0).toUpperCase()}</AvatarFallback>
         </Avatar>
         <div>
-          <CardTitle>{user.name || user.login}</CardTitle>
+          <CardTitle className=''>{user.name || user.login}</CardTitle>
           <p className="text-sm text-muted-foreground">{user.bio || 'No bio available'}</p>
         </div>
       </CardHeader>

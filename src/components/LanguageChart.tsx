@@ -17,22 +17,22 @@ export default function LanguageChart({ data }: LanguageChartProps) {
       <CardHeader>
         <CardTitle>Language Distribution</CardTitle>
       </CardHeader>
-      <CardContent className="h-96">
+      <CardContent className="h-96 ">
         {chartData.length > 0 ? (
-          <ResponsiveContainer width="100%" height="100%">
-            <PieChart>
-              <Pie
+          <ResponsiveContainer width="100%" height="100%" className=' relative z-10  '>
+            <PieChart className='' >
+              <Pie 
                 data={chartData}
                 cx="50%"
                 cy="50%"
                 labelLine={false}
-                outerRadius={80}
+                outerRadius={50}
                 fill="#8884d8"
                 dataKey="value"
                 label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
               >
                 {/* we are maaping on chartData for only getting the indexes for cell keys to filling the color */}
-                let ele=[]
+              
                 {chartData.map((_, index) => (
                        <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                        
